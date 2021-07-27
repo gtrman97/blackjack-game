@@ -1,6 +1,8 @@
 body {
     margin: auto;
     margin-top: 8.5vh;
+    background-image: url(cards.jpg);
+    
 }
 h1 {
     color: #deb914;
@@ -16,11 +18,13 @@ h2, p {
     text-align: center;
     margin: 12.5%;
     background-image: url(poker-table.jpg);
+    background-size: 100% 100%;
 }
 button {
     display: block;
     margin: auto;
     min-width: 35vw;
+    min-height: 4.5vh;
     background-color: #deb914;
     border: solid 2px #deb914;
     border-radius: 3px;
