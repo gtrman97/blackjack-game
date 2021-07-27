@@ -14,21 +14,21 @@ function startGame() {
 
     document.getElementById("cards").innerHTML = firstCard + " " + secondCard;
     document.getElementById("sum").innerHTML = sum; 
-
         
     if (sum < 21) {
         message = "Would you like a new card?"; 
+        document.getElementById("message-el").innerHTML = message; 
     } 
     else if (sum === 21) {
         message = "You've got blackjack!";
+        document.getElementById("message-el").innerHTML = message; 
         hasBlackJack = true; 
     }
     else {
         message = "You lose!";
+        document.getElementById("message-el").innerHTML = message; 
         isAlive = false; 
     }
-    
-    console.log(message);
 
 
 }

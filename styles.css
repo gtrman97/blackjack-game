@@ -30,8 +30,9 @@ button {
     min-width: 35vw;
     min-height: 4.5vh;
     color: #016f32;
+    font-weight: bold;
     background-color: goldenrod;
-    border: solid 2px goldenrod;
+    border: none;
     border-radius: 3px;
     margin-top: 2.5%;
 }
