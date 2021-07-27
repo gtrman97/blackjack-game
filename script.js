@@ -3,6 +3,7 @@ var isAlive = true;
 var message = "";
 const faceCards = ['J', 'Q', 'K']; 
 
+var sum = 0; 
 var min = 2; 
 var max = 11; 
 
@@ -11,7 +12,7 @@ function startGame() {
     let firstCard = Math.floor(Math.random() * (max - min) + min);  
     let secondCard = Math.floor(Math.random() * (max - min) + min);
     
-    let sum = firstCard + secondCard; 
+    lsum = firstCard + secondCard; 
 
     if (firstCard == 10) {
         firstCard = faceCards[Math.floor(Math.random() * (faceCards.length))]
@@ -38,5 +39,8 @@ function startGame() {
         isAlive = false; 
     }
 
+
+}
+function newCard() {
 
 }
