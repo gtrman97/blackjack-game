@@ -41,10 +41,12 @@ button:hover {
 }
 @media only screen and (min-width: 1024px) {
     .container {
-        max-width: 5vw;
+        display: block;
+        min-width: 5%;
     }
     button {
         min-height: 7.5vh;
+        /* max-width: 5px; */
         font-weight: bolder;
     }
 }
