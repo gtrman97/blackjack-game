@@ -21,7 +21,7 @@ function startGame() {
     }
 
     document.getElementById("cards").innerHTML = firstCard + " " + secondCard;
-    document.getElementById("sum").innerHTML = sum; 
+    document.getElementById("sum-el").innerHTML = sum; 
         
     if (sum < 21) {
         message = "Would you like a new card?"; 
