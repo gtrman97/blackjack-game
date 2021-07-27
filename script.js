@@ -2,6 +2,7 @@ var hasBlackJack = false;
 var isAlive = true; 
 var message = "";
 const faceCards = ['J', 'Q', 'K']; 
+var thirdCard = ""; 
 
 var sum = 0; 
 var min = 2; 
@@ -12,7 +13,7 @@ function startGame() {
     let firstCard = Math.floor(Math.random() * (max - min) + min);  
     let secondCard = Math.floor(Math.random() * (max - min) + min);
     
-    lsum = firstCard + secondCard; 
+    sum = firstCard + secondCard; 
 
     if (firstCard == 10) {
         firstCard = faceCards[Math.floor(Math.random() * (faceCards.length))]
@@ -21,7 +22,7 @@ function startGame() {
         secondCard = faceCards[Math.floor(Math.random() * (faceCards.length))]
     }
 
-    document.getElementById("cards").innerHTML = firstCard + " " + secondCard;
+    document.getElementById("cards").innerHTML = firstCard + " " + secondCard + " " + thirdCard;
     document.getElementById("sum-el").innerHTML = sum; 
         
     if (sum < 21) {
@@ -42,5 +43,8 @@ function startGame() {
 
 }
 function newCard() {
-
+    
+    thirdCard = Math.floor(Math.random() * (max - min) + min);
+    // sum += thirdCard; 
+    startGame(); 
 }
