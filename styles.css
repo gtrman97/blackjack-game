@@ -1,3 +1,28 @@
 body {
     margin: auto;
+    margin-top: 8.5vh;
+}
+h1 {
+    color: #deb914;
+}
+h2, p {
+    color: white;
+}
+.container {
+    max-width: 75vw;
+    max-height: 75vh;
+    border: solid 3px black;
+    border-radius: 15px;
+    text-align: center;
+    margin: 12.5%;
+    background-image: url(poker-table.jpg);
+}
+button {
+    display: block;
+    margin: auto;
+    min-width: 35vw;
+    background-color: #deb914;
+    border: solid 2px #deb914;
+    border-radius: 3px;
+    margin-top: 2.5%;
 }
