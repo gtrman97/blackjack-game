@@ -11,9 +11,11 @@ function startGame() {
     let secondCard = Math.floor(Math.random() * (max - min) + min);
     
     let sum = firstCard + secondCard; 
-    
-    console.log(sum);
-    
+
+    document.getElementById("cards").innerHTML = firstCard + " " + secondCard;
+    document.getElementById("sum").innerHTML = sum; 
+
+        
     if (sum < 21) {
         message = "Would you like a new card?"; 
     } 
