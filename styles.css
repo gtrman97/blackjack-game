@@ -2,6 +2,7 @@ body {
     margin: auto;
     margin-top: 8.5vh;
     background-image: url(cards.jpg);
+    background-size: cover;
     
 }
 h1 {
@@ -29,4 +30,7 @@ button {
     border: solid 2px #deb914;
     border-radius: 3px;
     margin-top: 2.5%;
+}
+button:hover {
+    background-color: yellow;
 }
