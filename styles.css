@@ -31,6 +31,7 @@ button {
     min-height: 4.5vh;
     color: #016f32;
     font-weight: bold;
+    text-transform: uppercase;
     background-color: goldenrod;
     border: none;
     border-radius: 3px;
