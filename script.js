@@ -53,8 +53,11 @@ function startGame() {
 
 }
 function newCard() {
-
     myCards.push(Math.floor(Math.random() * (max - min) + min)); 
     // sum += thirdCard; 
     // startGame(); 
+}
+function stay() {
+    document.getElementById("house-cards").innerHTML = hosueCards[0] + " - " + hosueCards[1]; 
+    
 }
