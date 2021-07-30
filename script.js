@@ -5,8 +5,8 @@ const faceCards = ['J', 'Q', 'K'];
 var myCards = []; 
 var hosueCards = [];
 
-var mySum = 0; 
-var houseSum = 0; 
+var mySum; 
+var houseSum; 
 var min = 2; 
 var max = 11; 
 
@@ -18,15 +18,16 @@ function startGame() {
     hosueCards.push(Math.floor(Math.random() * (max - min) + min));
     hosueCards.push(Math.floor(Math.random() * (max - min) + min));
     
-    mySum = myCards[0] + myCards[1]; 
-    houseSum = hosueCards[0] + hosueCards[1]; 
+    sum();
+    document.getElementById("my-sum").innerHTML = mySum; 
+    console.log(mySum);
 
-    if (myCards[0] == 10) {
-        myCards[0] = faceCards[Math.floor(Math.random() * (faceCards.length))]
-    }
-    if (myCards[1] == 10) {
-        myCards[1] = faceCards[Math.floor(Math.random() * (faceCards.length))]
-    }
+    // if (myCards[0] == 10) {
+    //     myCards[0] = faceCards[Math.floor(Math.random() * (faceCards.length))]
+    // }
+    // if (myCards[1] == 10) {
+    //     myCards[1] = faceCards[Math.floor(Math.random() * (faceCards.length))]
+    // }
 
     document.getElementById("my-cards").innerHTML = myCards[0] + " - " + myCards[1];
     document.getElementById("my-sum").innerHTML = mySum; 
@@ -38,15 +39,17 @@ function startGame() {
 }
 function newCard() {
 
-    let hit = myCards.push(Math.floor(Math.random() * (max - min) + min)); 
-    mySum += hit;  
+    myCards.push(Math.floor(Math.random() * (max - min) + min)); 
+    sum();  
     document.getElementById("my-cards").innerHTML = myCards.join(' - '); 
+    console.log(mySum);
+    bust();
 
 }
 function stay() {
     
-    document.getElementById("house-cards").innerHTML = hosueCards[0] + " - " + hosueCards[1]; 
-    document.getElementById("house-sum").innerHTML = hosueCards[0] + hosueCards[1]; 
+    document.getElementById("house-cards").innerHTML = hosueCards.join(' - '); 
+    document.getElementById("house-sum").innerHTML = houseSum;  
 
 }
 function bust() {
@@ -66,3 +69,16 @@ function bust() {
         isAlive = false; 
     }
 }
+function sum() {
+
+    mySum = 0;
+    houseSum = 0;
+
+    for (let i=0; i<myCards.length; i++){
+        mySum += myCards[i]; 
+    }
+}
+    for (let j=0; j<hosueCards.length; j++){
+        houseSum += hosueCards[j]; 
+    }
+    
