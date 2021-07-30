@@ -28,9 +28,11 @@ function startGame() {
         myCards[1] = faceCards[Math.floor(Math.random() * (faceCards.length))]
     }
 
-    document.getElementById("cards").innerHTML = myCards[0] + " - " + myCards[1];
-    document.getElementById("sum-el").innerHTML = mySum; 
+    document.getElementById("my-cards").innerHTML = myCards[0] + " - " + myCards[1];
+    document.getElementById("my-sum").innerHTML = mySum; 
     document.getElementById("house-cards").innerHTML = hosueCards[0] + " - ?"; 
+    document.getElementById("house-sum").innerHTML = "?"; 
+
         
     // if (sum < 21) {
     //     message = "Would you like a new card?"; 
