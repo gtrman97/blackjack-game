@@ -33,22 +33,7 @@ function startGame() {
     document.getElementById("house-cards").innerHTML = hosueCards[0] + " - ?"; 
     document.getElementById("house-sum").innerHTML = "?"; 
 
-        
-    // if (sum < 21) {
-    //     message = "Would you like a new card?"; 
-    //     document.getElementById("message-el").innerHTML = message; 
-    // } 
-    // else if (sum === 21) {
-    //     message = "You've got blackjack!";
-    //     document.getElementById("message-el").innerHTML = message; 
-    //     hasBlackJack = true; 
-    // }
-    // else {
-    //     message = "You lose!";
-    //     document.getElementById("message-el").innerHTML = message; 
-    //     isAlive = false; 
-    // }
-
+    bust();
 
 }
 function newCard() {
@@ -63,4 +48,21 @@ function stay() {
     document.getElementById("house-cards").innerHTML = hosueCards[0] + " - " + hosueCards[1]; 
     document.getElementById("house-sum").innerHTML = hosueCards[0] + hosueCards[1]; 
 
+}
+function bust() {
+
+    if (mySum < 21) {
+        message = "Would you like a new card?"; 
+        document.getElementById("message-el").innerHTML = message; 
+    } 
+    else if (mySum === 21) {
+        message = "You've got blackjack!";
+        document.getElementById("message-el").innerHTML = message; 
+        hasBlackJack = true; 
+    }
+    else {
+        message = "You lose!";
+        document.getElementById("message-el").innerHTML = message; 
+        isAlive = false; 
+    }
 }
