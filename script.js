@@ -23,7 +23,6 @@ function startGame() {
     
     sum();
     document.getElementById("my-sum").innerHTML = mySum; 
-    console.log(houseSum);
 
     // if (myCards[0] == 10) {
     //     myCards[0] = faceCards[Math.floor(Math.random() * (faceCards.length))]
@@ -53,6 +52,19 @@ function stay() {
     
     document.getElementById("house-cards").innerHTML = hosueCards.join(' - '); 
     document.getElementById("house-sum").innerHTML = houseSum;  
+
+    if (mySum > houseSum) {
+        
+        message = "You Win!"; 
+        document.getElementById("message-el").innerHTML = message; 
+
+    }
+    else {
+        
+        message = "House Wins!"; 
+        document.getElementById("message-el").innerHTML = message; 
+
+    }
 
 }
 function bust() {
