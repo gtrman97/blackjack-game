@@ -52,11 +52,15 @@ function startGame() {
 
 }
 function newCard() {
+
     myCards.push(Math.floor(Math.random() * (max - min) + min)); 
-    // sum += thirdCard; 
-    // startGame(); 
+    mySum += myCards[2]; 
+    document.getElementById("my-cards").innerHTML = myCards[0] + " - " + myCards[1] + myCards[2];
+    
 }
 function stay() {
-    document.getElementById("house-cards").innerHTML = hosueCards[0] + " - " + hosueCards[1]; 
     
+    document.getElementById("house-cards").innerHTML = hosueCards[0] + " - " + hosueCards[1]; 
+    document.getElementById("house-sum").innerHTML = hosueCards[0] + hosueCards[1]; 
+
 }
