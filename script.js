@@ -53,8 +53,8 @@ function startGame() {
 
 }
 function newCard() {
-    
-    thirdCard = Math.floor(Math.random() * (max - min) + min);
+
+    myCards.push(Math.floor(Math.random() * (max - min) + min)); 
     // sum += thirdCard; 
-    startGame(); 
+    // startGame(); 
 }
