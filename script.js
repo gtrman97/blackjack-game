@@ -5,7 +5,8 @@ const faceCards = ['J', 'Q', 'K'];
 var myCards = []; 
 var hosueCards = [];
 
-var sum = 0; 
+var mysum = 0; 
+var houseSum = 0; 
 var min = 2; 
 var max = 11; 
 
