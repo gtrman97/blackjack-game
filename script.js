@@ -20,7 +20,7 @@ function startGame() {
     
     sum();
     document.getElementById("my-sum").innerHTML = mySum; 
-    console.log(mySum);
+    console.log(houseSum);
 
     // if (myCards[0] == 10) {
     //     myCards[0] = faceCards[Math.floor(Math.random() * (faceCards.length))]
@@ -42,7 +42,7 @@ function newCard() {
     myCards.push(Math.floor(Math.random() * (max - min) + min)); 
     sum();  
     document.getElementById("my-cards").innerHTML = myCards.join(' - '); 
-    console.log(mySum);
+    document.getElementById("my-sum").innerHTML = mySum; 
     bust();
 
 }
@@ -77,8 +77,9 @@ function sum() {
     for (let i=0; i<myCards.length; i++){
         mySum += myCards[i]; 
     }
-}
+
     for (let j=0; j<hosueCards.length; j++){
         houseSum += hosueCards[j]; 
     }
+} 
     
