@@ -2,8 +2,8 @@ var hasBlackJack = false;
 var isAlive = true; 
 var message = "";
 const faceCards = ['J', 'Q', 'K']; 
-var myCards = []; 
-var hosueCards = [];
+var myCards; 
+var hosueCards;
 
 var mySum; 
 var houseSum; 
@@ -11,6 +11,9 @@ var min = 2;
 var max = 11; 
 
 function startGame() { 
+
+    myCards = [];
+    hosueCards = [];
 
     myCards.push(Math.floor(Math.random() * (max - min) + min));
     myCards.push(Math.floor(Math.random() * (max - min) + min));
