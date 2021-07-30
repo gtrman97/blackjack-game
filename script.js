@@ -2,7 +2,8 @@ var hasBlackJack = false;
 var isAlive = true; 
 var message = "";
 const faceCards = ['J', 'Q', 'K']; 
-var thirdCard = ""; 
+var myCards = []; 
+var dealerCards = [];
 
 var sum = 0; 
 var min = 2; 
@@ -10,19 +11,27 @@ var max = 11;
 
 function startGame() { 
 
-    let firstCard = Math.floor(Math.random() * (max - min) + min);  
-    let secondCard = Math.floor(Math.random() * (max - min) + min);
+    // let firstCard = Math.floor(Math.random() * (max - min) + min);  
+    // let secondCard = Math.floor(Math.random() * (max - min) + min);
+
+    myCards.push(Math.floor(Math.random() * (max - min) + min));
+    myCards.push(Math.floor(Math.random() * (max - min) + min));
+
+    dealerCards.push(Math.floor(Math.random() * (max - min) + min));
+    dealerCards.push(Math.floor(Math.random() * (max - min) + min));
+
+
     
-    sum = firstCard + secondCard; 
+    // sum = firstCard + secondCard; 
 
-    if (firstCard == 10) {
-        firstCard = faceCards[Math.floor(Math.random() * (faceCards.length))]
+    if (myCards[0] == 10) {
+        myCards[0] = faceCards[Math.floor(Math.random() * (faceCards.length))]
     }
-    if (secondCard == 10) {
-        secondCard = faceCards[Math.floor(Math.random() * (faceCards.length))]
+    if (myCards[1] == 10) {
+        myCards[1] = faceCards[Math.floor(Math.random() * (faceCards.length))]
     }
 
-    document.getElementById("cards").innerHTML = firstCard + " " + secondCard + " " + thirdCard;
+    document.getElementById("cards").innerHTML = firstCard + " " + secondCard;
     document.getElementById("sum-el").innerHTML = sum; 
         
     if (sum < 21) {
