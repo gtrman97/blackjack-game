@@ -5,25 +5,21 @@ const faceCards = ['J', 'Q', 'K'];
 var myCards = []; 
 var hosueCards = [];
 
-var mysum = 0; 
+var mySum = 0; 
 var houseSum = 0; 
 var min = 2; 
 var max = 11; 
 
 function startGame() { 
 
-    // let firstCard = Math.floor(Math.random() * (max - min) + min);  
-    // let secondCard = Math.floor(Math.random() * (max - min) + min);
-
     myCards.push(Math.floor(Math.random() * (max - min) + min));
     myCards.push(Math.floor(Math.random() * (max - min) + min));
 
     hosueCards.push(Math.floor(Math.random() * (max - min) + min));
     hosueCards.push(Math.floor(Math.random() * (max - min) + min));
-
-
     
-    // sum = firstCard + secondCard; 
+    mySum = myCards[0] + myCards[1]; 
+    houseSum = hosueCards[0] + hosueCards[1]; 
 
     if (myCards[0] == 10) {
         myCards[0] = faceCards[Math.floor(Math.random() * (faceCards.length))]
@@ -33,7 +29,7 @@ function startGame() {
     }
 
     document.getElementById("cards").innerHTML = myCards[0] + " - " + myCards[1];
-    // document.getElementById("sum-el").innerHTML = sum; 
+    document.getElementById("sum-el").innerHTML = mySum; 
     document.getElementById("house-cards").innerHTML = hosueCards[0] + " - ?"; 
         
     // if (sum < 21) {
