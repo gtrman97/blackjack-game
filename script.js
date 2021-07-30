@@ -53,10 +53,10 @@ function startGame() {
 }
 function newCard() {
 
-    myCards.push(Math.floor(Math.random() * (max - min) + min)); 
-    mySum += myCards[2]; 
-    document.getElementById("my-cards").innerHTML = myCards[0] + " - " + myCards[1] + myCards[2];
-    
+    let hit = myCards.push(Math.floor(Math.random() * (max - min) + min)); 
+    mySum += hit;  
+    document.getElementById("my-cards").innerHTML = myCards.join(' - '); 
+
 }
 function stay() {
     
