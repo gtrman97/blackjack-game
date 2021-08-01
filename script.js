@@ -10,6 +10,8 @@ var houseSum;
 var min = 2; 
 var max = 11; 
 
+let card = {}
+
 function startGame() { 
 
     myCards = [];
