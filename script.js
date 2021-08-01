@@ -1,14 +1,14 @@
-var hasBlackJack = false; 
-var isAlive = true; 
-var message = "";
+let hasBlackJack = false; 
+let isAlive = true; 
+let message = "";
 const faceCards = ['J', 'Q', 'K']; 
-var myCards; 
-var hosueCards;
+let myCards; 
+let hosueCards;
 
-var mySum; 
-var houseSum; 
-var min = 2; 
-var max = 11; 
+let mySum; 
+let houseSum; 
+let min = 2; 
+let max = 11; 
 
 let card = {}
 
