@@ -10,7 +10,20 @@ let houseSum;
 let min = 2; 
 let max = 11; 
 
-let card = {}
+let deck = [
+{ 
+    display: "J",
+    value: 10
+},  
+{
+    display: "Q",
+    value: 10
+},
+{
+    display: "K",
+    value: 10
+}
+]; 
 
 function startGame() { 
 
