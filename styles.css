@@ -52,5 +52,6 @@ button:hover {
         min-height: 7.5vh;
         /* max-width: 5px; */
         font-weight: bolder;
+        font-size: large;
     }
 }
