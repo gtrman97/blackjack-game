@@ -13,51 +13,74 @@ let max = 11;
 let deck = [
 { 
     display: "2",
-    value: 2
+    value: 2,
+    isDealt = false
 },  
 {
     display: "3",
-    value: 3
+    value: 3,
+    isDealt = false
+
 },
 {
     display: "4",
-    value: 4
+    value: 4,
+    isDealt = false
+
 },
 { 
     display: "5",
-    value: 5
+    value: 5,
+    isDealt = false
+
 },  
 {
     display: "6",
-    value: 6
+    value: 6,
+    isDealt = false
+
 },
 {
     display: "7",
-    value: 7
+    value: 7,
+    isDealt = false
+
 },
 { 
     display: "8",
-    value: 8
+    value: 8,
+    isDealt = false
+
 },  
 {
     display: "9",
-    value: 9
+    value: 9,
+    isDealt = false
+
 },
 {
     display: "10",
-    value: 10
+    value: 10,
+    isDealt = false
+
 },
 { 
     display: "J",
-    value: 10
+    value: 10,
+    isDealt = false
+
 },  
 {
     display: "Q",
-    value: 10
+    value: 10,
+    isDealt = false
+
 },
 {
     display: "K",
-    value: 10
+    value: 10,
+    isDealt = false
+
 }
 ]; 
 
