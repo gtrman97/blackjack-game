@@ -1,3 +1,8 @@
+let age = window.prompt("You must be 21 to play this game. Please enter your age:"); 
+if (age < 21) {
+    alert("You are too young!"); 
+}
+
 let hasBlackJack = false; 
 let isAlive = true; 
 let message = "";
@@ -120,6 +125,11 @@ function stay() {
     if (mySum > houseSum) {
         
         message = "You Win!"; 
+        document.getElementById("message-el").innerHTML = message; 
+
+    }
+    if (mySum == houseSum) {
+        message = "Tie Game!"; 
         document.getElementById("message-el").innerHTML = message; 
 
     }
