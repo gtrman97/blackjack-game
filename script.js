@@ -128,7 +128,7 @@ function stay() {
         document.getElementById("message-el").innerHTML = message; 
 
     }
-    if (mySum == houseSum) {
+    else if (mySum == houseSum) {
         message = "Tie Game!"; 
         document.getElementById("message-el").innerHTML = message; 
 
