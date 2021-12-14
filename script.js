@@ -1,8 +1,3 @@
-let age = window.prompt("You must be 21 to play this game. Please enter your age:"); 
-if (age < 21) {
-    alert("You are too young!"); 
-}
-
 let hasBlackJack = false; 
 let isAlive = true; 
 let message = "";
@@ -92,13 +87,6 @@ function startGame() {
     
     sum();
     document.getElementById("my-sum").innerHTML = mySum; 
-
-    // if (myCards[0] == 10) {
-    //     myCards[0] = faceCards[Math.floor(Math.random() * (faceCards.length))]
-    // }
-    // if (myCards[1] == 10) {
-    //     myCards[1] = faceCards[Math.floor(Math.random() * (faceCards.length))]
-    // }
 
     document.getElementById("my-cards").innerHTML = myCards[0] + " - " + myCards[1];
     document.getElementById("my-sum").innerHTML = mySum; 
